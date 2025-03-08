@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';  // Import useLocation for acces
 
 function HobbyRecommendations() {
     const location = useLocation();
-    const hobbySuggestions = location.state?.hobbySuggestions;
+    const hobbySuggestions = location.state?.hobbySuggestions || localStorage.getItem('hobbySuggestions');
 
     const [recommendations, setRecommendations] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -14,7 +14,7 @@ function HobbyRecommendations() {
                 setError(null);
 
                 if (hobbySuggestions) {
-                    setRecommendations(hobbySuggestions.split(',').map((hobby) => hobby.trim()));
+                    setRecommendations(hobbySuggestions.match(/[a-zA-Z\s]+/g) || []);
                 } else {
                     setError('No recommendations found.');
                 }

@@ -37,7 +37,7 @@ function PersonalityTest() {
             console.log('AI response:', response.data);
 
             // Save or process the hobby suggestions
-            const hobbySuggestions = response.data.choices[0].message.content.trim();
+            const hobbySuggestions = response.data.choices?.[0]?.message?.content?.trim() || "No hobbies found.";
 
 
             // Store the hobby suggestions in localStorage for use on the next page
