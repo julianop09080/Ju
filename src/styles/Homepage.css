@@ -1,91 +1,96 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4a90e2, #80b9f4); /* Lighter blue gradient */
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensures full screen height */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .nav-buttons .btn {
-    margin-left: 1rem;
-    color: white;
-    text-decoration: none;
-    background: #ff9800;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-  }
-  
-  /* Hero Section */
-  .hero {
-    padding: 5rem 2rem;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .btn.primary {
-    background: #ff5722;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 1rem;
-  }
-  
-  /* Info Section */
-  .info {
-    padding: 3rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .info details {
-    margin: 1rem 0;
-  }
-  
-  .info details summary {
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  /* Donations */
-  .donations {
-    padding: 3rem 2rem;
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  .btn.donate {
-    background: #4caf50;
-    padding: 1rem 2rem;
-    border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  footer {
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-    font-size: 0.9rem;
-  }
+  margin-left: 1rem;
+  color: #ff6f61; /* Sharp warm color */
+  text-decoration: none;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  padding: 5rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  flex-grow: 1; /* Allows section to take available space */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn.primary {
+  background: #ff5722;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Info Section */
+.info {
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.info details {
+  margin: 1rem 0;
+}
+
+.info details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Donations */
+.donations {
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn.donate {
+  background: #4caf50;
+  padding: 1rem 2rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+}

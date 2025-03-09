@@ -24,7 +24,7 @@ const Homepage = () => {
             >
                 <h2>Discover Your Passion with AI</h2>
                 <p>Take a personality test and get personalized hobby recommendations.</p>
-                <Link to="/test" className="btn primary">Take the Test</Link>
+                <Link to="/personality-test" className="btn primary">Take the Test</Link>
             </motion.div>
 
             {/* Information Section */}
