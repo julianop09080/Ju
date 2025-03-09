@@ -1,16 +1,18 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Router, Routes, Route } from 'react-router-dom';
 import Homepage from "./components/Homepage";
 import PersonalityTest from './components/PersonalityTest';
 import HobbyRecommendations from './components/HobbyRecommendations';
 
 function App() {
   return (
-    <Routes>
+    <Router>
+      <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/personality-test" element={<PersonalityTest />} />
+        <Route path="/test" element={<PersonalityTest />} />
         <Route path="/hobby-recommendations" element={<HobbyRecommendations />} />
-    </Routes>
+      </Routes>
+    </Router>
   );
 }
 
