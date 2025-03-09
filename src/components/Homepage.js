@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
-import "./Homepage.css"; // Import the styles
+import '../styles/Homepage.css'; // Import the styles
 
 const Homepage = () => {
     return (
