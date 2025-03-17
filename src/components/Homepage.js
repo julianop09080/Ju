@@ -46,7 +46,7 @@ const Homepage = () => {
         {/* Donation Section */}
         
         <section className="donations">
-           <h2>Support Our Mission</h2>
+           <h2 className="calligraphy-text">Support Our Mission</h2>
            <p>Your donations help us expand our hobby database and improve AI recommendations.</p>
            <button className="btn donate">Donate Now</button> 
         </section>

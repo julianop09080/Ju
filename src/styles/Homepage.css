@@ -1,3 +1,6 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
@@ -22,6 +25,7 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
+  font-family: 'Great Vibes', cursive;
 }
 
 .nav-buttons .btn {
@@ -44,14 +48,15 @@ body {
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: 'Great Vibes', cursive;
 }
 
 .btn.primary {
-  background: #ff5722;
+  background: #ffffff;
   padding: 1rem 2rem;
   border-radius: 5px;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 41, 58);
   font-weight: bold;
   display: inline-block;
   margin-top: 1rem;
@@ -79,10 +84,10 @@ body {
 }
 
 .btn.donate {
-  background: #4caf50;
+  background: #ffffff;
   padding: 1rem 2rem;
   border: none;
-  color: white;
+  color: rgb(81, 226, 101);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
