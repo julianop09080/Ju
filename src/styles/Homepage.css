@@ -4,12 +4,12 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #4a90e2, #80b9f4); /* Lighter blue gradient */
+  background: linear-gradient(135deg, #4a90e2, #6a11cb);
   color: white;
   text-align: center;
   margin: 0;
   padding: 0;
-  height: 100vh; /* Ensures full screen height */
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -19,47 +19,68 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   font-family: 'Great Vibes', cursive;
 }
 
 .nav-buttons .btn {
   margin-left: 1rem;
-  color: #ff6f61; /* Sharp warm color */
-  text-decoration: none;
-  background: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  color: white;
+  background: #ff6f61;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
   font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-buttons .btn:hover {
+  background: #e05245;
 }
 
 /* Hero Section */
 .hero {
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
+  flex-grow: 1;
   background: rgba(0, 0, 0, 0.3);
-  flex-grow: 1; /* Allows section to take available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   font-family: 'Great Vibes', cursive;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
 }
 
 .btn.primary {
   background: #ffffff;
   padding: 1rem 2rem;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   color: rgb(0, 41, 58);
   font-weight: bold;
   display: inline-block;
-  margin-top: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn.primary:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
 }
 
 /* Info Section */
@@ -83,19 +104,30 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.donation-title {
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+}
+
 .btn.donate {
-  background: #ffffff;
+  background: #4caf50;
   padding: 1rem 2rem;
   border: none;
-  color: rgb(81, 226, 101);
+  color: white;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn.donate:hover {
+  background: #43a047;
+  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   font-size: 0.9rem;
 }
