@@ -1,11 +1,11 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #4a90e2, #6a11cb);
-  color: white;
+  background: rgb(255, 255, 255);
+  color: rgba(63, 54, 54, 0.6);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -19,20 +19,20 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.6);
+  background: #FFF5E1; /* Cream White */
   align-items: center;
 }
 
 .logo {
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Barriecito';
 }
 
 .nav-buttons .btn {
   margin-left: 1rem;
-  color: white;
-  background: #ff6f61;
+  color: rgb(0, 41, 58);
+  background: #ffffff;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-weight: bold;
@@ -41,14 +41,14 @@ body {
 }
 
 .nav-buttons .btn:hover {
-  background: #e05245;
+  background: #f1f1f1;
 }
 
 /* Hero Section */
 .hero {
   padding: 6rem 2rem;
   flex-grow: 1;
-  background: rgba(0, 0, 0, 0.3);
+  background: #FFF5E1; /* Cream White */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +58,7 @@ body {
 .hero h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Barriecito';
 }
 
 .hero-subtext {
@@ -68,25 +68,25 @@ body {
 }
 
 .btn.primary {
-  background: #ffffff;
+  background: #26baff;
   padding: 1rem 2rem;
   border-radius: 8px;
   text-decoration: none;
-  color: rgb(0, 41, 58);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   display: inline-block;
   transition: background 0.3s, transform 0.2s;
 }
 
 .btn.primary:hover {
-  background: #f1f1f1;
+  background: #26baff;
   transform: scale(1.05);
 }
 
 /* Info Section */
 .info {
   padding: 3rem 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: #FDA172; /* Benjamin Moore Sweet Orange */
 }
 
 .info details {
@@ -101,7 +101,7 @@ body {
 /* Donations */
 .donations {
   padding: 3rem 2rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: #FDA172; /* Benjamin Moore Sweet Orange */
 }
 
 .donation-title {
@@ -128,6 +128,6 @@ body {
 /* Footer */
 footer {
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(168, 203, 255, 0.6);
   font-size: 0.9rem;
 }
