@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Homepage />} />
-        <Route path="/donate" element={<DonationPage />} />
+        <Route path="/donation" element={<DonationPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/edit-profile" element={<EditProfile />} />
