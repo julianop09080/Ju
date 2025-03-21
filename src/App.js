@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from "./components/Homepage";
-import DonationPage from "./DonationPage";
+import DonationPage from "./components/DonationPage";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import Profile from "./Profile";

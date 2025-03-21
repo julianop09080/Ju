@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import "./DonationPage.css"; // Add styles for better UI
+import "../DonationPage.css"; // Add styles for better UI
 
 const stripePromise = loadStripe("pk_live_51R4sXYG6MlVeHlPtDw1EGw6A4fri9UJHcGOXl01VV6Yg5rNHDevu7h3JVu97PbQMFt4EM7UfYVL7qs0GHialHobI00CzWSI5f1"); // Replace with your Stripe Public Key
 
