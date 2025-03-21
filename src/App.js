@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from "./components/Homepage";
+import DonationPage from "./DonationPage";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import Profile from "./Profile";
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Homepage />} />
+        <Route path="/donate" element={<DonationPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/edit-profile" element={<EditProfile />} />
