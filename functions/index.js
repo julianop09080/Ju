@@ -32,7 +32,7 @@ app.post("/create-payment-intent", async (req, res) => {
 });
 
 // Ensure the Express app listens on the correct port
-const PORT = process.env.PORT || 8080; // Use the PORT environment
+const PORT = process.env.PORT || 3000; // Use the PORT environment
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
