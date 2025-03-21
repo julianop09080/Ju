@@ -51,7 +51,7 @@ const EditProfile = () => {
     await setDoc(doc(db, "users", user.uid), { name, avatar: imageURL }, { merge: true });
 
     setLoading(false);
-    navigate("/profile"); // Redirect back to profile page
+    navigate("/Profile"); // Redirect back to profile page
   };
 
   return (
