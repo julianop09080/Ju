@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import { auth, googleProvider } from "../firebaseConfig";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../firebase-config";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css"; // Import styles
 
-const Login = () => {
+const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/profile"); // Redirect to profile after login
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate("/profile"); // Redirect to profile after signup
     } catch (err) {
       setError(err.message);
     }
   };
 
-  const handleGoogleLogin = async () => {
+  const handleGoogleSignup = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
       navigate("/profile");
@@ -32,17 +32,17 @@ const Login = () => {
 
   return (
     <div className="auth-container">
-      <h2>Login</h2>
+      <h2>Create Account</h2>
       {error && <p className="error">{error}</p>}
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleSignup}>
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit" className="btn primary">Login</button>
+        <button type="submit" className="btn primary">Sign Up</button>
       </form>
-      <button onClick={handleGoogleLogin} className="btn google">Login with Google</button>
-      <p>Don't have an account? <Link to="/signup">Create one</Link></p>
+      <button onClick={handleGoogleSignup} className="btn google">Sign Up with Google</button>
+      <p>Already have an account? <Link to="/login">Login</Link></p>
     </div>
   );
 };
 
-export default Login;
+export default Signup;

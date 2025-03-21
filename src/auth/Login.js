@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import { auth, googleProvider } from "../firebaseConfig";
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../firebase-config";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css"; // Import styles
 
-const Signup = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSignup = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/profile"); // Redirect to profile after signup
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/profile"); // Redirect to profile after login
     } catch (err) {
       setError(err.message);
     }
   };
 
-  const handleGoogleSignup = async () => {
+  const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
       navigate("/profile");
@@ -32,17 +32,17 @@ const Signup = () => {
 
   return (
     <div className="auth-container">
-      <h2>Create Account</h2>
+      <h2>Login</h2>
       {error && <p className="error">{error}</p>}
-      <form onSubmit={handleSignup}>
+      <form onSubmit={handleLogin}>
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit" className="btn primary">Sign Up</button>
+        <button type="submit" className="btn primary">Login</button>
       </form>
-      <button onClick={handleGoogleSignup} className="btn google">Sign Up with Google</button>
-      <p>Already have an account? <Link to="/login">Login</Link></p>
+      <button onClick={handleGoogleLogin} className="btn google">Login with Google</button>
+      <p>Don't have an account? <Link to="/signup">Create one</Link></p>
     </div>
   );
 };
 
-export default Signup;
+export default Login;
